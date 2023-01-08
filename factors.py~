@@ -1,0 +1,43 @@
+#!/usr/bin/python
+""" This module factorizes numbers into a product of two smaller
+    numbers.
+"""
+
+
+import sys
+
+# checking if only the file name is passed as argument
+if len(sys.argv) == 1:
+    return
+try:
+    # opening the file name provided as the first argument
+    with open(sys.argv[1]) as file:
+        # reading line by line
+        line = file.readline()
+        # checking if line is not empty
+        while line != "":
+            # converting the string to int
+            num = int(line[0])
+            # factorizing the number
+            fact(num)
+            # go to the next line when done
+            line = file.readline()
+except Exception:
+    # if there is any unexpected error, pass
+    pass
+
+
+def fact(num):
+    """ This function factorize into product of two smaller num"""
+
+    # starting at the minimum number
+    divisor = 2
+
+    # checking for lines with number leess than or equal 1 
+    if num <= 1:
+        return
+    # if num is not even, keep make i be a perfect divisor
+    while num % i:
+        i = i + 1
+    # print a neatly formatted output 
+    print("{:d}={:d}*{:d}".format(num, num/divisor, divisor))
