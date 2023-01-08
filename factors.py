@@ -22,8 +22,8 @@ def fact(num):
     # if num is not even, keep make i be a perfect divisor
     while num % divisor:
         divisor = divisor + 1
-    # print a neatly formatted output
-    print("{:.0f}={:.0f}*{:d}".format(num, num/divisor, divisor))
+    # print a neatly formatted output as whole number
+    print("{:.0f}={:.0f}*{:.0f}".format(num, num/divisor, divisor))
 
 
 try:
