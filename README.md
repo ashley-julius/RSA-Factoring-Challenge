@@ -1,29 +1,13 @@
-RSA is the most widely used public-key cryptography algorithm in the world. It is also one of the most secure, with only a few known attacks that can be used to break it. but this is by design and not by accident.
+# RSA Factoring Challenge
 
-One of the most interesting things about RSA is that it can be used for more than just encryption. It can also be used for digital signatures and for key exchange.
+## Algorithm #Scripting
 
-The RSA algorithm is a public-key cryptosystem. This means that there are two keys, a public key, and a private key. The public key can be known by everyone and is used for encryption. The private key is known only by the owner and is used for decryption. The RSA algorithm is asymmetric, which means that the encryption and decryption keys are different.
+![image](https://user-images.githubusercontent.com/105078661/208537372-3171dfba-f74a-4d8f-bcb0-d02b2bd86120.png)
 
-The RSA algorithm is based on the fact that it is very difficult to factorize large numbers. The security of the RSA algorithm, therefore, depends on the fact that the factorization of large numbers is a difficult problem.
+The RSA algorithm (Rivest-Shamir-Adleman) is the basis of a cryptosystem -- a suite of cryptographic algorithms that are used for specific security services or purposes -- which enables public key encryption and is widely used to secure sensitive data, particularly when it is being sent over an insecure network such as the internet.
 
-RSA is a relatively old algorithm, having been developed in the 1970s by Ron Rivest, Adi Shamir, and Len Adleman. It is based on the difficulty of factoring large numbers.
+## General Requirement
+- You can choose the language of your choice.
+- OS needs to be Standard Ubuntu 20.04 LTS/
 
-Importants points to be aware of:
-
-public key is used for message encryption>>>>> (e, N)
-
-private key is used for message decryption>>>>>>(d, N)
-
-Euler Totient >>>>>>> T = (p - 1).(q - 1)
-
-Finding the e:
-	Rules:
-		it must be less than T
-		it must be coprime of T and N
-
-Finding the d:
-
-	Rules:
-		using : (e . d) mod(T) = 1
-
-Rsa is an amazing way to encrypt a message.
+![image](https://user-images.githubusercontent.com/105078661/208537555-15cf166f-4aaa-451c-a2dc-a226918584fe.png)

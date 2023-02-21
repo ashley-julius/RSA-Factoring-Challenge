@@ -1,44 +1,29 @@
 #!/usr/bin/python3
-""" This module factorizes numbers into a product of two smaller
-    numbers.
-"""
+"""factorize given set of numbers in a file to product of two small numbers"""
+from sys import argv
 
-import sys
 
-# checking if only the file name is passed as argument
-if len(sys.argv) == 1:
+def factorize(number_to_check):
+    """"find two small numbers that multiply to give a given number"""
+    i = 2
+
+    if number_to_check < 2:
+        return
+    
+    while number_to_check % i:
+        i += 1
+    print("{:.0f}={:.0f}*{:.0f}".format(number_to_check, number_to_check / i, i))
+
+if len(argv) != 2:
     exit()
 
-
-def fact(num):
-    """ This function factorize into product of two smaller num"""
-
-    # starting at the minimum number
-    divisor = 2
-
-    # checking for lines with number less than or equal 1
-    if num < 2:
-        return
-    # if num is not even, keep make i be a perfect divisor
-    while num % divisor:
-        divisor = divisor + 1
-    # print a neatly formatted output as whole number
-    print("{:.0f}={:.0f}*{:.0f}".format(num, num/divisor, divisor))
-
-
 try:
-    # opening the file name provided as the first argument
-    with open(sys.argv[1]) as file:
-        # reading line by line
+    with open(argv[1]) as file:
         line = file.readline()
-        # checking if line is not empty
+
         while line != "":
-            # converting the string to int
-            num = int(line.split('\n')[0])
-            # factorizing the number
-            fact(num)
-            # go to the next line when done
+            number_to_check = int(line.split('\n')[0])
+            factorize(number_to_check)
             line = file.readline()
-except Exception:
-    # if there is any unexpected error, pass
+except:
     pass
